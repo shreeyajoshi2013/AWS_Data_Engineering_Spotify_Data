@@ -1,10 +1,15 @@
 ﻿# AWS Data Engineering Project - Spotify data analysis
 
-This project aims to create a data pipeline that will enable the top-performing song playlist on Spotify to be accessed and utilised for data analysis.
-It seeks to effectively set up a data pipeline that takes data straight from an API and transforms it into something that can be analysed and presented in a query-friendly manner. To import, extract, and process the data and make it accessible for analysis, the data pipeline makes use of AWS. 
+This project aims to enable data analysts of imaginary music firms to have queryable and up-to-date data available for analysis everyday. The data is of Spotify's top trending songs, which they can use for understanding audiences listening habits by applying data analytics.<br>
+<br>
+This project seeks to effectively set up a data pipeline that takes data straight from a Spotify API and transforms it into a form that can be analysed and presented in a query-friendly manner. <br>
+To import, extract, and process the data and make it accessible for analysis, the data pipeline makes use of AWS services. 
 
 Data source:
 Portal of Spotify APIs -  [Spotify for Developers](https://developer.spotify.com/)
+
+
+### Data Pipeline flowchart
 
 ![My Image](DataFlowDiagram.jpg) 
 
@@ -20,9 +25,9 @@ Portal of Spotify APIs -  [Spotify for Developers](https://developer.spotify.com
 ### Main activities
 * Integrating with Spotify API and extracting the data
 * Using AWS S3 to store the files
-* Deploying codes on AWS Lambda for Data Extraction and Transformation
-* Adding trigger to schedule and run the function automatically
-* Building Data Catalogs of data files using AWS Glue
+* Deploying Python codes on AWS Lambda for Data Extraction, Transformation and Loading
+* Adding triggers to schedule and run the functions automatically
+* Building Data Catalogs of the data files using AWS Glue crawlers
 * Analysing the tables using SQL in Athena
 
 
@@ -53,7 +58,10 @@ Portal of Spotify APIs -  [Spotify for Developers](https://developer.spotify.com
 
 ### Other Tools
 
-* Miro board - Used for Data Pipeline Diagram 
+* Jupyter Notebook - For preliminary analysis of the source data
+* VS code - For deploing the project on Git
+* Miro board - For creating Data Pipeline Diagram
+
 
 ### References
 
