@@ -85,7 +85,6 @@ def lambda_handler(event, context):
             # Append the file name(file_key) to the list of file names(spotify_keys)
             spotify_keys.append(file_key)
             
-
             
     for data in spotify_data:
         
@@ -130,7 +129,7 @@ def lambda_handler(event, context):
         artist_content=artist_buffer.getvalue()
         s3.put_object(Bucket=Bucket,Key=artist_key, Body=artist_content)
         
-        # Move the source files from source folder to a different folder, and empty the source folder
+    # Move the source files from source folder to a different folder, and empty the source folder
     s3_resource = boto3.resource('s3')
     # print("------------------------")
     # print(spotify_keys)
@@ -140,7 +139,6 @@ def lambda_handler(event, context):
             'Bucket': Bucket,
             'Key': key1
         }
-        
         s3_resource.meta.client.copy(copy_source, Bucket, 'raw_data/processed/' + key1.split("/")[-1])
         # Delete the file from the source folder - to_be_processed
         s3_resource.Object(Bucket,key1).delete()
