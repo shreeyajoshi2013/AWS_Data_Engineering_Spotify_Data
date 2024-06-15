@@ -142,5 +142,4 @@ def lambda_handler(event, context):
         s3_resource.meta.client.copy(copy_source, Bucket, 'raw_data/processed/' + key1.split("/")[-1])
         # Delete the file from the source folder - to_be_processed
         s3_resource.Object(Bucket,key1).delete()
-    # print(spotify_keys)   
-    # print("------------------------")
+  
