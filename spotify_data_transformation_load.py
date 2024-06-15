@@ -6,7 +6,6 @@ import pandas as pd
 
 
 def album(data):
-
     album_list = []
     for row in data['items']:
         album_id = row['track']['album']['id']
@@ -37,8 +36,6 @@ def artist(data):
     
     
 def song(data):
-    
-   
     song_list = []
     for row in data['items']:
         song_id = row['track']['id']
